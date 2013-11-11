@@ -2,10 +2,10 @@
 class repo_mysql {
   case $::operatingsystem {
     centos, redhat, amazon: {
-      $baseurl = "http://repo.mysql.com/yum/mysql-community/el/${::os_maj_version}/"
+      $baseurl = "http://repo.mysql.com/yum/mysql-community/el/${::os_maj_version}"
     }
     fedora: {
-      $baseurl = 'http://repo.mysql.com/yum/mysql-community/fc/$releasever/'
+      $baseurl = 'http://repo.mysql.com/yum/mysql-community/fc/$releasever'
     }
     default: {
       fail('ERROR: Your operating system is not supported for the MySQL repository')
